@@ -26,6 +26,8 @@ class ProjectController extends Controller
             'title' => 'required',
             'description' => 'required',
         ]);
+
+        $attributes['user_id'] = auth()->user()->id;
         //persist data
         Project::create($attributes);
         //redirect back

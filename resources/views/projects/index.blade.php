@@ -1,5 +1,4 @@
-{{ $projects }}
-    <!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,8 +11,9 @@
 <h1>Projects</h1>
 @foreach($projects as $project)
     <div>
-        <h1>{{ $project->title }}</h1>
-        <p>{{ $project->description }}</p>
+        <a href="{{ $project->path() }}">
+            <h1>{{ $project->title }}</h1>
+        </a>
     </div>
 @endforeach
 </body>
