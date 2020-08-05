@@ -10,13 +10,14 @@ class ProjectController extends Controller
     public function index()
     {
         //index projects
-        $projects =  Project::all();
+        $projects =  auth()->user()->projects;
         return view('projects.index', compact('projects'));
     }
 
     public function show(Project $project)
     {
-        return view('projects.show', compact('project'));
+        abort_if( auth()->user()->isNot($project->user), 403);
+         return view('projects.show', compact('project'));
     }
 
     public function store()
@@ -27,9 +28,8 @@ class ProjectController extends Controller
             'description' => 'required',
         ]);
 
-        $attributes['user_id'] = auth()->user()->id;
         //persist data
-        Project::create($attributes);
+        auth()->user()->projects()->create($attributes);
         //redirect back
         return redirect('/projects');
     }

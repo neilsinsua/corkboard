@@ -5,27 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0644f515-9a2b-4eec-9d82-a0ce336b9225" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Unit/ProjectTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/corkboard.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/corkboard.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Unit/UserTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/80850092-f701-457c-8bb9-4baedd61bf64.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/80850092-f701-457c-8bb9-4baedd61bf64.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Project.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/ProjectFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ProjectFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_04_124940_create_projects_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_04_124940_create_projects_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/projects/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/projects/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ProjectsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ProjectTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ProjectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ProjectTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/ProjectTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ProjectTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,26 +159,27 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RunManager" selected="PHPUnit.ProjectTest">
+    <configuration name="ProjectTest (1)" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\ProjectTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/ProjectTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
     <configuration name="ProjectTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\ProjectTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ProjectTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="ProjectTest.test_a_project_requires_a_description" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\ProjectTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ProjectTest.php" method="test_a_project_requires_a_description" scope="Method" />
+    <configuration name="ProjectTest.testA_user_can_view_their_project" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ProjectTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ProjectTest.php" method="testA_user_can_view_their_project" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ProjectTest.test_a_user_can_create_a_project" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\ProjectTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ProjectTest.php" method="test_a_user_can_create_a_project" scope="Method" />
+    <configuration name="ProjectTest.testIt_has_a_user" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\ProjectTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/ProjectTest.php" method="testIt_has_a_user" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ProjectTest.test_a_user_can_view_a_project" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\ProjectTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ProjectTest.php" method="test_a_user_can_view_a_project" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ProjectTest.test_only_authenticated_users_can_create_projects" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\ProjectTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ProjectTest.php" method="test_only_authenticated_users_can_create_projects" scope="Method" />
+    <configuration name="ProjectTest.testOnly_authenticated_users_can_view_their_own_projects" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ProjectTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ProjectTest.php" method="testOnly_authenticated_users_can_view_their_own_projects" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -194,10 +189,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="PHPUnit.ProjectTest" />
-        <item itemvalue="PHPUnit.ProjectTest.test_a_user_can_create_a_project" />
-        <item itemvalue="PHPUnit.ProjectTest.test_only_authenticated_users_can_create_projects" />
-        <item itemvalue="PHPUnit.ProjectTest.test_a_user_can_view_a_project" />
-        <item itemvalue="PHPUnit.ProjectTest.test_a_project_requires_a_description" />
+        <item itemvalue="PHPUnit.ProjectTest (1)" />
+        <item itemvalue="PHPUnit.ProjectTest.testIt_has_a_user" />
+        <item itemvalue="PHPUnit.ProjectTest.testA_user_can_view_their_project" />
+        <item itemvalue="PHPUnit.ProjectTest.testOnly_authenticated_users_can_view_their_own_projects" />
       </list>
     </recent_temporary>
   </component>
@@ -211,7 +206,9 @@
       <updated>1596439750534</updated>
       <workItem from="1596439752625" duration="1562000" />
       <workItem from="1596452150166" duration="322000" />
-      <workItem from="1596453343346" duration="17242000" />
+      <workItem from="1596453343346" duration="20890000" />
+      <workItem from="1596592399076" duration="1148000" />
+      <workItem from="1596598135070" duration="7267000" />
     </task>
     <task id="LOCAL-00001" summary="Install Framework">
       <created>1596440255953</created>
@@ -227,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596517299942</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Testing a project should belong to an authenticated user">
+      <created>1596528723058</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1596528723058</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,7 +241,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Install Framework" />
     <MESSAGE value="Testing request validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testing request validation" />
+    <MESSAGE value="Testing a project should belong to an authenticated user" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing a project should belong to an authenticated user" />
   </component>
   <component name="WindowStateProjectService">
     <state x="494" y="0" width="588" height="824" key="#PHP" timestamp="1596453772960">
@@ -248,14 +253,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1596440062827" />
+    <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1596605727015">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1536.824@0.0.1536.824" timestamp="1596605727015" />
     <state x="290" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1596517432794">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="290" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1596517432793" />
-    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1596517299031">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1596605408227">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1596517299031" />
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1596605408227" />
+    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1596528722404">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1596528722404" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1596510975058">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -264,30 +277,34 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="645" y="314" width="522" height="330" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1596517341408" />
-    <state width="1493" height="268" key="GridCell.Tab.0.bottom" timestamp="1596528310174">
+    <state width="1493" height="268" key="GridCell.Tab.0.bottom" timestamp="1596606165921">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="268" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596528310174" />
-    <state width="1493" height="268" key="GridCell.Tab.0.center" timestamp="1596528310174">
+    <state width="1493" height="268" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596606165921" />
+    <state width="1493" height="268" key="GridCell.Tab.0.center" timestamp="1596606165921">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="268" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596528310174" />
-    <state width="1493" height="268" key="GridCell.Tab.0.left" timestamp="1596528310174">
+    <state width="1493" height="268" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596606165921" />
+    <state width="1493" height="268" key="GridCell.Tab.0.left" timestamp="1596606165921">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="268" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596528310174" />
-    <state width="1493" height="268" key="GridCell.Tab.0.right" timestamp="1596528310174">
+    <state width="1493" height="268" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596606165921" />
+    <state width="1493" height="268" key="GridCell.Tab.0.right" timestamp="1596606165921">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="268" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596528310174" />
+    <state width="1493" height="268" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596606165921" />
     <state x="541" y="119" key="NewPhpClassDialog" timestamp="1596510978749">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="541" y="119" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1596510978749" />
-    <state x="361" y="127" key="Vcs.Push.Dialog.v2" timestamp="1596517313770">
+    <state x="277" y="57" key="SettingsEditor" timestamp="1596600546939">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="127" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1596517313770" />
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1596600546939" />
+    <state x="361" y="127" key="Vcs.Push.Dialog.v2" timestamp="1596528727017">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="127" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1596528727017" />
     <state x="670" y="291" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1596440046558">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -296,9 +313,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="640" y="222" width="270" height="379" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1596454124800" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1596527457830">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1596606117564">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1596527457830" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1596606117564" />
   </component>
 </project>

@@ -11,62 +11,75 @@ use Tests\TestCase;
 class ProjectTest extends TestCase
 {
     use WithFaker, RefreshDatabase;
+    //Assumptions
+    //1. All users must be authenticated
+    //2. Creators of a project are known as users
 
-    public function test_only_authenticated_users_can_create_projects()
+    public function testUnauthenticated_users_cant_create_projects()
     {
-        //When a project is created and your not signed in
+        // When a project is created and your not signed in
         $attributes = factory(Project::class)->raw();
-        // Assert should redirect to login
+        // Then redirect to login
         $this->post('/projects', $attributes)->assertRedirect('/login');
     }
 
-    public function test_a_user_can_create_a_project()
+    public function testUnauthenticated_users_cant_view_projects()
     {
-
         $user = factory(User::class)->create();
-        $this->actingAs($user);
-        $attributes = factory(Project::class)->raw(['user_id' => $user->id]);
-
-        //Action: a post request is made to projects
-        $this->post('/projects', $attributes)->assertRedirect('/projects');
-        //Check: Database should have that project
-        $this->assertDatabaseHas('projects', $attributes);
-
-        //Action: a get request is made to projects
-        //Check: I can see the project in the response
-        $this->get('/projects')->assertSee($attributes['title']);
-
-    }
-
-    public function test_a_user_can_view_a_project()
-    {
-        $this->actingAs(factory(User::class)->create());
-        //Given a project exists
         $project = factory(Project::class)->create();
-        //When we make a get request
-        //Then we should see the project
-        $this->get($project->path())->assertSee($project->title)->assertSee($project->description);
-
+        // When not logged in
+        // Then redirect to login page
+        $this->get($project->path())->assertRedirect('login');
+        $this->actingAs($user);
+        // When logged in but not authorized
+        // Then return forbidden
+        $this->get($project->path())->assertForbidden();
     }
 
-    public function test_a_project_requires_a_title()
+    public function testA_user_can_create_a_project()
+    {
+        $user = factory(User::class)->create();
+        //Given a user is logged in
+        $this->actingAs($user);
+        //And they create a project
+        $attributes = factory(Project::class)->raw(['user_id' => $user->id]);
+        //When a post request is made to projects
+        $this->post('/projects', $attributes)->assertRedirect('/projects');
+        //Then the Database has that project
+        $this->assertDatabaseHas('projects', $attributes);
+    }
+
+    public function testA_user_can_view_their_projects()
+    {
+        $user = factory(User::class)->create();
+        //Given a user is logged in
+        $this->actingAs($user);
+        //Given they create a project
+        $project = factory(Project::class)->create(['user_id' => $user->id]);
+        //When they make a get request to projects
+        //Then they can see all their projects
+        $this->get('/projects')->assertSee($user->projects);
+        //When they make a get request to the project they created
+        //Then they will see a that project
+        $this->get($project->path())->assertSee($project->title)->assertSee($project->description);
+    }
+
+    public function testA_project_requires_a_title()
     {
         $this->actingAs(factory(User::class)->create());
         $attributes = factory(Project::class)->raw(['title' => '']);
-        //Action: when a post request is made without a title
-        //Check: should throw a validation error
+        //When a post request is made without a title
+        //Then throw a validation error
         $this->post('/projects', $attributes)->assertSessionHasErrors('title');
-
     }
 
-    public function test_a_project_requires_a_description()
+    public function testA_project_requires_a_description()
     {
         $this->actingAs(factory(User::class)->create());
         $attributes = factory(Project::class)->raw(['description' => '']);
-        //Action: when a post request is made without a title
-        //Check: should throw a validation error
+        //When a post request is made without a description
+        //Then throw a validation error
         $this->post('/projects', $attributes)->assertSessionHasErrors('description');
-
     }
 
 }
